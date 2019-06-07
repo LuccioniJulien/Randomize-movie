@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Badge } from "react-native-paper";
 import { StyleSheet } from "react-native";
-import { white, red, black } from "../constant/color";
+import { white, red } from "../constant/color";
 
 const Badges = ({ genres = [] }) => {
   return genres.slice(0, 4).map(({ name }, index) => (
@@ -16,7 +16,7 @@ export default Badges;
 const styles = StyleSheet.create({
   chip: {
     color: white,
-    backgroundColor: black,
+    backgroundColor: red,
     fontSize: 17,
     marginLeft: 4
   }

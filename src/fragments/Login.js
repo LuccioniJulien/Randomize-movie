@@ -4,7 +4,6 @@ import { Button, TextInput, Title } from "react-native-paper";
 import { StyleSheet, Text, View } from "react-native";
 
 export default class Login extends React.Component {
-  
   state = {
     mail: "",
     password: ""
