@@ -1,5 +1,3 @@
-import l from "./Login";
-export const Login = l;
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
 
-import r from "./Register";
-export const Register = r;

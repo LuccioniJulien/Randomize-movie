@@ -33,7 +33,6 @@ export default class RandomMovie extends React.Component {
 
   setFilterParams = (genre, year) => this.setState({ genre, year });
 
-
   getFilterParams = () => {
     const { genre, year } = this.state;
     return { genre, year };
@@ -59,8 +58,11 @@ export default class RandomMovie extends React.Component {
     try {
       this.setState({ isLoading: true });
       const params = this.getParamsNonNull();
-      const totalPage = await getTotalPagesOfMoviesWithFilter(params);
-      params.page = this.getRandomId({ min: 1, max: totalPage });
+      const response = await getTotalPagesOfMoviesWithFilter(params);
+      params.page = this.getRandomId({
+        min: 1,
+        max: response.data.total_pages
+      });
       const { data } = await getRandomPageOfMoviesWithFilter(params);
       const max = data.results.length;
       const { id } = data.results[this.getRandomId({ min: 0, max })];

@@ -1,8 +1,3 @@
-import c from "./Card";
-export const Card = c;
-
-import ch from "./Chips";
-export const Chips = ch;
-
-import l from "./Loading";
-export const Loading = l;
+export { default as Card } from "./Card";
+export { default as Chips } from "./Chips";
+export { default as Loading } from "./Loading";
