@@ -1,8 +1,4 @@
 import * as React from "react";
-import Main from "./src";
+import Main from "./src/navigation/Stack";
 
-export default class App extends React.Component {
-  render() {
-    return <Main />;
-  }
-}
+export default () => <Main />;

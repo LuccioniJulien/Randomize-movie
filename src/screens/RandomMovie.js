@@ -31,9 +31,8 @@ export default class RandomMovie extends React.Component {
     year: null
   };
 
-  setFilterParams = (genre, year) => {
-    this.setState({ genre, year });
-  };
+  setFilterParams = (genre, year) => this.setState({ genre, year });
+
 
   getFilterParams = () => {
     const { genre, year } = this.state;
